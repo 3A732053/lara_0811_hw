@@ -19,6 +19,21 @@
                 font-family: 'Nunito';
             }
         </style>
+
+        <style>
+            .button {
+                background-color: #4CAF50;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+        </style>
     </head>
     <body class="antialiased">
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
@@ -45,14 +60,9 @@
                     </svg>
                 </div>
 
-                <?php echo "<br>"; ?>
+                <input type="button" class="button" value="關於本站"  onclick="location.href='{{ URL::route('about.index')}}'">
 
-                <a href="/about">關於本站</a>
-
-                <?php echo "<br><br>"; ?>
-
-                <a href="/news">最新消息</a>
-
+                <input type="button" class="button" value="最新消息"  onclick="location.href='{{ URL::route('news.index')}}'">
 
                 <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                     <div class="grid grid-cols-1 md:grid-cols-2">
